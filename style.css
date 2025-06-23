@@ -1,0 +1,255 @@
+/* Google Font Importları */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif; /* Ana metin fontu */
+    color: #ECF0F1; /* Açık gri metin rengi */
+    background: linear-gradient(to right, #2C3E50, #1A2C3D); /* Koyu mavi gradyan arka plan */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(44, 62, 80, 0.95); /* Yarı şeffaf koyu mavi kutu */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    position: relative; /* İçindeki elemanların konumlandırılması için */
+    z-index: 10; /* Diğer elemanların üstünde olması için */
+}
+
+/* Giriş Ekranı Stilleri */
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #2C3E50, #1A2C3D); /* Koyu mavi gradyan */
+    color: #ECF0F1;
+    position: fixed; /* Sayfayı kaplaması için */
+    top: 0;
+    left: 0;
+    z-index: 100; /* En üstte durması için */
+}
+
+.login-screen h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #FFC0CB; /* Pembe vurgu */
+    margin-bottom: 20px;
+}
+
+.login-screen p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.login-screen input {
+    padding: 12px;
+    font-size: 17px;
+    margin-top: 15px;
+    border: 2px solid #3498DB; /* Turkuaz sınır */
+    border-radius: 8px;
+    background-color: #34495E; /* Daha koyu arka plan */
+    color: #ECF0F1;
+    width: 80%;
+    max-width: 250px;
+    text-align: center;
+    box-sizing: border-box; /* Padding'i genişliğe dahil et */
+}
+
+.login-screen input::placeholder {
+    color: rgba(236, 240, 241, 0.6);
+}
+
+.login-screen button {
+    padding: 12px 25px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #3498DB; /* Turkuaz buton */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-screen button:hover {
+    background-color: #2980B9; /* Hafif koyulaşma */
+    transform: translateY(-2px); /* Hafif yukarı kalkma */
+}
+
+#error {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #FF6347 !important; /* Kırmızı hata mesajı */
+}
+
+/* Ana İçerik Başlık ve Metin Stilleri */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    color: #FFDAB9; /* Şeftali rengi */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #1ABC9C; /* Daha canlı turkuaz */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.intro, .bottom-note, .top-note {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #BDC3C7; /* Hafif gri */
+    margin-bottom: 25px;
+}
+
+.top-note {
+    position: absolute; /* Konumlandırma için */
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    color: rgba(255, 218, 185, 0.7); /* Şeftali rengi, biraz şeffaf */
+    white-space: nowrap; /* Tek satırda kalmasını sağlar */
+}
+
+.bottom-note {
+    margin-top: 40px;
+    font-size: 1em;
+    color: rgba(255, 218, 185, 0.7);
+}
+
+strong {
+    color: #FFC0CB; /* Pembe vurgu */
+}
+
+/* Hikaye Olayları (Timeline Event) Stilleri */
+.timeline-event {
+    background-color: rgba(52, 73, 94, 0.8); /* Olay kutusu arka planı */
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid #1ABC9C; /* Sol tarafına vurgu çizgisi */
+    text-align: left;
+}
+
+.timeline-event p {
+    line-height: 1.6;
+    font-size: 1.05em;
+    color: #ECF0F1;
+}
+
+.event-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 3px solid #3498DB; /* Mavi çerçeve */
+}
+
+/* Buton Grubu Stilleri */
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Butonlar arası boşluk */
+}
+
+.remember-button, .forget-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+}
+
+.remember-button {
+    background-color: #27AE60; /* Yeşil */
+    color: white;
+}
+
+.remember-button:hover {
+    background-color: #2ECC71; /* Açık yeşil */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.forget-button {
+    background-color: #E74C3C; /* Kırmızı */
+    color: white;
+}
+
+.forget-button:hover {
+    background-color: #C0392B; /* Koyu kırmızı */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* Responsive Ayarlar (Küçük ekranlar için) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+    .button-group {
+        flex-direction: column; /* Küçük ekranlarda butonları alt alta al */
+        gap: 10px;
+    }
+    .remember-button, .forget-button, .login-screen input, .login-screen button {
+        width: 90%; /* Daha geniş butonlar */
+        max-width: none;
+    }
+}
+
+/* Sayfa Geçiş Animasyonları */
+/* Bu kısım @media bloğunun dışında olmalı */
+.page-transition-out {
+    opacity: 0; /* Başlangıçta tamamen şeffaf */
+    transform: translateY(20px); /* Hafifçe aşağı kaydır */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Opaklık ve transform için 0.5 saniyelik geçiş */
+}
+
+.page-transition-in {
+    opacity: 0; /* Başlangıçta tamamen şeffaf */
+    transform: translateY(-20px); /* Hafifçe yukarı kaydır */
+    animation: fadeInSlideIn 0.7s ease-out forwards; /* Animasyon başlatma */
+}
+
+@keyframes fadeInSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

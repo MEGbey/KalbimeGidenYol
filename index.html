@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bizim Hikayemiz - Giriş</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="login-screen">
+        <h2>Giriş</h2>
+        <p>Lütfen şifreyi gir:</p>
+        <input type="password" id="password" placeholder="Şifre"/>
+        <button onclick="checkPassword()">Giriş Yap</button>
+        <p id="error"></p>
+    </div>
+
+    <div class="main-content" id="main-content" style="display:none;">
+        <div class="container">
+            <p class="top-note">Bu site Eray'dan Fethiye'ye...</p>
+            <h1>Fıstık ile Eray'ın Hikayesi</h1>
+            <p class="intro">Bu sadece bir aşk hikayesi değil... Bu, her şeyin başladığı o güzel anların hikayesi.</p>
+
+            <div class="timeline-event">
+                <h2>İlk Tanışma</h2>
+                <img src="resimler/ilk-tanisma.jpg" alt="İlk Tanışma Anısı" class="event-image">
+                <p>Gözlerin gözlerime değdiğinde, dünya biraz daha güzel bir yer oldu. Hatırlıyor musun, o ilk anı?</p>
+            </div>
+
+            <div class="button-group">
+                <button class="remember-button" onclick="goToNextPage()">Hatırlıyorum 💚</button>
+                <button class="forget-button" onclick="showForgetMessage()">Hatırlamıyorum 💔</button>
+            </div>
+
+            <p class="bottom-note">Bu site, bir özür değil… bir hatırlatma. Ne kadar güzel olduğumuzu unutma diye.</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const errorElement = document.getElementById('error');
+            if (password === '10ocak') {
+                document.querySelector('.login-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            } else {
+                errorElement.textContent = 'Yanlış şifre. Tekrar dene.';
+            }
+        }
+
+function goToNextPage() {
+    const currentContent = document.getElementById('main-content');
+    currentContent.classList.add('page-transition-out'); // Çıkış animasyonunu ekle
+
+    setTimeout(() => {
+        window.location.href = 'ilk-sozu.html'; // Buradaki dosya adı her sayfa için farklı olmalı
+    }, 500); // 0.5 saniye bekle
+}
+
+        function showForgetMessage() {
+            alert("Aman Tanrım, nasıl unutursun? Şaka yapıyorum! Belki Eray'ın gözünden yeniden yaşamak istersin :)");
+        }
+    </script>
+</body>
+</html>

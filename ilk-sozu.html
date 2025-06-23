@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bizim Hikayemiz - İlk Söylediğin Söz</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="main-content" id="main-content">
+        <div class="container">
+            <p class="top-note">Bu site Eray'dan Fıstık'a...</p>
+            <h1>Fıstık ile Eray'ın Hikayesi</h1>
+            <p class="intro">Bu sadece bir aşk hikayesi değil... Bu, her şeyin başladığı o güzel anların hikayesi.</p>
+
+            <div class="timeline-event">
+                <h2>İlk Söylediği Söz</h2>
+                <img src="resimler/ilk-sozu.jpg" alt="İlk Tanışma Anısı" class="event-image">
+                <p>Tanıştığımızda söylediğin o ilk söz... Belki basit bir merhabaydı ama benim için bir dönüm noktasıydı. Hatırlıyor musun? Hem çok gergin hem çok heyecanlıydım. ( kaderinde yokmuş >:/ ) </p>
+            </div>
+
+            <div class="button-group">
+                <button class="remember-button" onclick="goToNextPage()">Hatırlıyorum 💚</button>
+                <button class="forget-button" onclick="showForgetMessage()">Hatırlamıyorum 💔</button>
+            </div>
+
+            <p class="bottom-note">Bu site, bir özür değil… bir hatırlatma. Ne kadar güzel olduğumuzu unutma diye.</p>
+        </div>
+    </div>
+
+    <script>
+function goToNextPage() {
+    const currentContent = document.getElementById('main-content');
+    currentContent.classList.add('page-transition-out'); // Çıkış animasyonunu ekle
+
+    setTimeout(() => {
+        window.location.href = 'ilk-bulusma.html'; // Buradaki dosya adı her sayfa için farklı olmalı
+    }, 500); // 0.5 saniye bekle
+}
+
+        function showForgetMessage() {
+            alert("Şırfıntı seni. O kadar önemli bir anı nasıl unutursun? Eray sana her detayı anlatmaya hazır.");
+        }
+    </script>
+</body>
+</html>

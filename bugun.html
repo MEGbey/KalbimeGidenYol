@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bizim Hikayemiz - Bugün</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="main-content" id="main-content">
+        <div class="container">
+            <p class="top-note">Bu site Eray'dan Fıstık'a...</p>
+            <h1>Fıstık ile Eray'ın Hikayesi</h1>
+            <img src="resimler/bugün.jpg" alt="İlk Tanışma Anısı" class="event-image">
+            <p class="intro">Bu sadece bir aşk hikayesi değil... Bu, her şeyin başladığı o güzel anların hikayesi.</p>
+
+            <div class="timeline-event">
+                <h2>Bugün</h2>
+                <p>Şimdi buradayım. Tüm kalbimle seni özlüyor ve yeniden "biz" olmak istiyorum Fıstığım.</p>
+            </div>
+
+            <div class="ending">
+                <p>Bu site, bir özür değil… bir hatırlatma. Ne kadar güzel olduğumuzu unutma diye.</p>
+                <p>Sevgilerle, <strong>Eray</strong> 💙</p>
+                <div class="button-group">
+                    <button class="remember-button" onclick="goToStart()">Hikayemize Yeniden Başla!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+function goToStart() {
+    const currentContent = document.getElementById('main-content');
+    currentContent.classList.add('page-transition-out'); // Çıkış animasyonunu ekle
+
+    setTimeout(() => {
+        window.location.href = 'index.html'; // Buradaki dosya adı her sayfa için farklı olmalı
+    }, 500); // 0.5 saniye bekle
+}
+    </script>
+</body>
+</html>
